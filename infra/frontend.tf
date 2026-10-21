@@ -4,7 +4,6 @@ module "website" {
   website_id        = "website-${local.id}"
   website_files_dir = "${path.module}/../frontend_dist"
   enable_cdn        = true
-  enable_https = true
 }
 
 
