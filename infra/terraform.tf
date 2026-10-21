@@ -1,16 +1,21 @@
 terraform {
   required_providers {
     google = {
-      source = "hashicorp/google"
+      source  = "hashicorp/google"
       version = "6.26.0"
+    }
+
+    random = {
+      source  = "hashicorp/random"
+      version = "3.6.3"
     }
   }
 }
 
 provider "google" {
-  project     = "cloud-labs-workshop-42clws"
-  region      = "europe-west1"
-  zone        = "europe-west1-b"
+  project = "cloud-labs-workshop-42clws"
+  region  = "europe-west1"
+  zone    = "europe-west1-b"
 }
 
 data "google_client_openid_userinfo" "current" {}
